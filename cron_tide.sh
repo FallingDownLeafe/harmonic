@@ -71,7 +71,7 @@ if [ -z "$STATIONS" ]; then
 fi
 N=$(echo $STATIONS | wc -w)
 say "$MODE：共 $N 站，逐站執行中（詳細輸出在 $LOG）"
-case " ${EXTRA[*]-} " in *" --skip-db-write "*) say "※ 有加 --skip-db-write：只計算，不寫入資料庫" ;; esac
+case " ${EXTRA[*]-} " in (*" --skip-db-write "*) say "※ 有加 --skip-db-write：只計算，不寫入資料庫" ;; esac
 worst=0
 summary=""
 i=0
